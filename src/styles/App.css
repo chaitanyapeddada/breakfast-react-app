@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+}
+
+.breakfast-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.breakfast-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breakfast-item-name {
+    font-size: 1.2em;
+    color: #495057;
+}
+
+.breakfast-item-cost {
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+.App {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.banner {
+    background-color: #f8b400;
+    color: #4a1c03;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.banner h1 {
+    margin: 0 0 1.5rem 0;
+    font-size: 2.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.restaurant-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.restaurant-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.address, .contact {
+    font-weight: 500;
+}
+
+.timings {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(74, 28, 3, 0.1);
+}
+
+.timings p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.contact-info, .timing-info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.contact-info {
+    text-align: left;
+    border-right: 2px solid rgba(74, 28, 3, 0.1);
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.timing-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.timing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.timing-slot {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.meal-type {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        border-right: none;
+        border-bottom: 2px solid rgba(74, 28, 3, 0.1);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .timing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- FOOTER STYLES --- */
+
+/* 1. Overall Footer Look */
+footer {
+    background-color: #4a1413; /* Deep, rich red/brown, often used in food aesthetics */
+    color: #fff; /* White text for contrast */
+    padding: 40px 20px;
+    margin-top: 30px; /* Space between the main content and the footer */
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+}
+
+/* 2. Layout Management */
+.info-container {
+    display: flex;
+    /* Put contact info on one side, timings on the other */
+    justify-content: space-around; 
+    align-items: flex-start; /* Align content to the top */
+    max-width: 1100px;
+    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Allows sections to stack on small screens */
+}
+
+/* 3. Contact Information Styling */
+.contact-info, .timing-info {
+    flex-basis: 45%; /* Give both sections similar width on desktop */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px; /* Spacing between address, phone, and email */
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* Make links stand out and clickable */
+.contact-info a {
+    color: #ffd700; /* Gold/Yellow color for highlight */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 4. Timing Section Enhancements */
+.timing-info h3 {
+    color: #ffd700; /* Highlight the heading */
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Use CSS Grid for the open hours display */
+.timing-grid {
+    display: grid;
+    /* Create two columns: one for meal type, one for time */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px 30px; /* Vertical and horizontal spacing */
+}
+
+.timing-slot {
+    /* No need for complex styling here, grid handles the layout */
+}
+
+.timing-slot .meal-type {
+    font-weight: bold;
+    color: #ffd700;
+    margin: 0;
+}
+
+.timing-slot p {
+    margin: 0;
+}
+
+/* 5. Responsive Design (Crucial for mobile attractiveness) */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-info, .timing-info {
+        flex-basis: 100%; /* Take full width */
+        max-width: 400px; /* Limit width for better readability on phones */
+    }
+
+    .timing-grid {
+        grid-template-columns: 1fr; /* Stack timings vertically */
+    }
+}
